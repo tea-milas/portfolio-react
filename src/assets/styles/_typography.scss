@@ -1,0 +1,136 @@
+@import './_variables.scss';
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+//FONTS
+$primary-font : 'Lato', sans-serif;
+$secondary-font: Arial, Helvetica, sans-serif;
+
+$font-header: 100px;
+$font-XXL: 90px;
+$font-XL: 78px;
+$font-L: 70px;
+$font-LM: 50px;
+$font-M: 40px;
+$font-MS : 30px;
+$font-S: 25px;
+$font-XS: 18px;
+$font-XXS: 15px;
+
+$bold : 700;
+
+
+body {
+    font-family: $primary-font;
+  
+}
+
+p {
+    font-family: $secondary-font;
+}
+
+// header title
+h1 {
+    font-size: $font-header;
+    font-weight: $bold;
+}
+
+h2 {
+    font-size: $font-XL;
+    font-weight: $bold;
+}
+
+// section titles
+h3 {
+    font-size: $font-L;
+}
+
+h4, a{
+    font-size: $font-MS;
+}
+
+p, h5, h6 {
+    font-size: $font-S;
+}
+
+// ICONS
+
+.fab, .fas {
+    color: $colour-ocre;
+    font-size: $font-M;
+}
+
+.fab:hover, .fas:hover {
+    color: $colour-light-grey;
+    font-size: $font-LM;
+}
+
+
+@media only screen and (max-width: 740px) {
+    h1 {
+        font-size: $font-XL;
+        font-weight: $bold;
+    }
+    
+    h2 {
+        font-size: $font-L;
+        font-weight: $bold;
+    }
+    
+    h3 {
+        font-size: $font-MS;
+    }
+    
+    h4 {
+        font-size: $font-S;
+    }
+    
+    p, a, h5, h6 {
+        font-size: $font-XS;
+    }
+
+}
+
+@media only screen and (max-width: 556px) {
+    h1 {
+        font-size: $font-L;
+        font-weight: $bold;
+    }
+    
+    h2 {
+        font-size: $font-M;
+        font-weight: $bold;
+    }
+
+} 
+
+
+///-----------------------------------
+@media only screen and (min-width: 667px) {
+    h3 {
+        font-size: $font-M;   // TITLES of pages
+    }         
+}
+
+@media only screen and (min-width: 768px) {
+    h3 {
+        font-size: 60px;
+    }
+}
+
+@media only screen and (min-width: 812px) {
+    h3 {
+        font-size: 40px;
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    h3 {
+        font-size: 60px;
+    }
+}
+
+@media only screen and (min-width: 1440px) {
+    h3 {
+        font-size: 70px;
+    }
+}

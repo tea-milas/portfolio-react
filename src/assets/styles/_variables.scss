@@ -1,0 +1,27 @@
+//COLOURS
+$colour-grey:  #332A2A;
+$colour-light-grey: #C4C4C4;
+$colour-white:  #E5E5E5;
+$colour-ocre: #A4742C;
+
+$color-bg: #EBECF0;
+$color-shadow: #BABECC;
+$color-white: #FFF;
+$ruler: 16px;
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-height: 100vh;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+main {
+    width: 100%;
+    overflow-x: hidden;
+    background-color: #EBECF0;
+}

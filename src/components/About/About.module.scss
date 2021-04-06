@@ -1,0 +1,43 @@
+@import '../../assets/styles/_variables.scss';
+@import '../../assets/styles/_typography.scss';
+
+.about {
+    height: 100vh;
+    position: relative;
+    background-color: $colour-grey;
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+// tablet landscape
+
+@media only screen and (max-width: 1025px) {
+    .about {
+        justify-content: center;
+    }
+}
+
+// tablet vertical
+
+@media only screen and (max-width: 800px) {
+    .about {
+        justify-content: center;
+    }
+}
+
+// mobile landscape     
+@media only screen and (max-width: 750px) {
+    .about {
+        flex-direction: row;
+    }
+}
+
+@media only screen and (max-width: 415px) {
+    .about {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}
