@@ -9,25 +9,18 @@
     flex-direction: column;
 }
 
-
-
-// tablet landscape
-
 @media only screen and (max-width: 1025px) {
     .about {
         justify-content: center;
     }
 }
 
-// tablet vertical
-
 @media only screen and (max-width: 800px) {
     .about {
         justify-content: center;
     }
 }
-
-// mobile landscape     
+     
 @media only screen and (max-width: 750px) {
     .about {
         flex-direction: row;

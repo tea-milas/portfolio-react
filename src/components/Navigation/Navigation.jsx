@@ -16,7 +16,8 @@ const Navigation = () => {
             }
         }, []);
 
-    let isMobile = (width <= 768);
+    let isMobile = (width <= 760);
+
 
     return (
         <>

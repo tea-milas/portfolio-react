@@ -1,51 +1,72 @@
 @import '../../../assets/styles/_variables.scss';
 @import '../../../assets/styles/_typography.scss';
-@media only screen and (max-width: 1024px) {
-    .navMob{
-        height: 50vh;
+
+    
+    .mobileNav{
         position: fixed;
-        background-color: white;
-        z-index: 2;
+        top: 0;
+        left: 0;
+        z-index: 15;
+        width: 100%;
+        height: 100vh;
 
-
-        .sideNav {
-            text-align: center;
-            height: 100%;;
-            width: 0;
-            z-index: 1; 
-            top: 0; 
-            left: 0;
-            overflow-x: hidden; 
-            padding-top: 60px; 
-            transition: 0.8s;
+       
+        .openbtn {
+            font-size: 40px;
+            cursor: pointer;
+            background-color: transparent;
+            color: black;
+            padding: 10px 15px;
+            border: none;
+        }
         
-            
+    }
+        
+
+    .sidepanel {
+        height: 100vh; 
+        width: 100%; 
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        background-color:  $colour-ocre;
+        overflow-x: hidden; 
+        transition: ease-in-out 1s;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        .closebtn {
+            cursor: pointer;
+            background: transparent;
+            border: 0;
+            position: absolute;
+            top: 10px;
+            right: 25px;
+            font-size: 36px;
+            margin-left: 50px;
+            color: $colour-grey;
+        }
+
+        ul {
+            height: 100vh;
+            width: 90%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            li {
+                margin: 1em;
+                a {
+                    font-size: 60px;
+                    &:hover, &:active {
+                        color: $colour-grey;
+                    }
+                }
+            }
         }
     }
 
-    .open {
-        background-color: white;
-        width: 100%;
-        position: fixed;
-        top:0;
-        left: 0;
-        right: 0;
-        z-index: 2;
-    }
-
-    .closebtn {
-        position: absolute;
-        top: 5px;
-        right: 20px;
-        font-size: 30px;
-    }
-
-    .openbtn {
-        font-size:30px;
-        cursor:pointer;
-        position: absolute;
-        top: 5px;
-        left:10px;
-        z-index: 1;
-    }
-}

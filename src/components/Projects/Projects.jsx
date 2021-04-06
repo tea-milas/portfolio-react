@@ -21,8 +21,8 @@ const Projects = () => {
                         <li><FontAwesomeIcon icon={['fab', 'html5']}/></li>
                     </ul>
                     <div className={styles.project__links}>
-                        <button><a href="https://github.com/tea-milas/morse-code-translator" target="_blank">CODE</a></button>
-                        <button><a href="https://tea-milas.github.io/morse-code-translator/" target="_blank">WEBSITE</a></button>
+                        <button><a href="https://github.com/tea-milas/morse-code-translator" target="_blank" rel="noreferrer">CODE</a></button>
+                        <button><a href="https://tea-milas.github.io/morse-code-translator/" target="_blank" rel="noreferrer">WEBSITE</a></button>
                     </div>
                 </section>   
             </article>
@@ -37,7 +37,7 @@ const Projects = () => {
                         <li><FontAwesomeIcon icon={['fab', 'html5']}/></li>
                     </ul>
                     <div className={styles.project__links}>
-                        <button><a href="https://github.com/tea-milas/notesy-app">CODE</a></button>
+                        <button><a href="https://github.com/tea-milas/notesy-app" rel="noreferrer">CODE</a></button>
                         <button><a>WEBSITE</a></button>
                     </div>
                 </section>   
@@ -55,8 +55,8 @@ const Projects = () => {
                         <li><FontAwesomeIcon icon={['fab', 'html5']}/></li>
                     </ul>
                     <div className={styles.project__links}>
-                        <button><a href="https://github.com/tea-milas/calculator" target="_blank">CODE</a></button>
-                        <button><a href="https://tea-milas.github.io/calculator/" target="_blank">WEBSITE</a></button>
+                        <button><a href="https://github.com/tea-milas/calculator" target="_blank" rel="noreferrer">CODE</a></button>
+                        <button><a href="https://tea-milas.github.io/calculator/" target="_blank" rel="noreferrer">WEBSITE</a></button>
                     </div>
                 </section>   
             </article>   
@@ -71,8 +71,8 @@ const Projects = () => {
                         <li><FontAwesomeIcon icon={['fab', 'html5']}/></li>
                     </ul>
                     <div className={styles.project__links}>
-                        <button><a href="https://github.com/tea-milas/memory-game" target="_blank">CODE</a></button>
-                        <button><a href="https://tea-milas.github.io/memory-game/" target="_blank">WEBSITE</a></button>
+                        <button><a href="https://github.com/tea-milas/memory-game" target="_blank" rel="noreferrer">CODE</a></button>
+                        <button><a href="https://tea-milas.github.io/memory-game/" target="_blank" rel="noreferrer">WEBSITE</a></button>
                     </div>
                 </section>   
                 <img className={styles.project__image} src="https://raw.githubusercontent.com/tea-milas/memory-game/main/assets/img/screenshot_2.JPG"/>
@@ -89,8 +89,8 @@ const Projects = () => {
                         <li><FontAwesomeIcon icon={['fab', 'html5']}/></li>
                     </ul>
                     <div className={styles.project__links}>
-                        <button><a href="https://github.com/tea-milas/pottery-collective" target="_blank">CODE</a></button>
-                        <button><a href="https://tea-milas.github.io/pottery-collective/" target="_blank">WEBSITE</a></button>
+                        <button><a href="https://github.com/tea-milas/pottery-collective" target="_blank" rel="noreferrer">CODE</a></button>
+                        <button><a href="https://tea-milas.github.io/pottery-collective/" target="_blank" rel="noreferrer">WEBSITE</a></button>
                     </div>
                 </section>   
             </article>                

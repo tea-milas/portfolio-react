@@ -1,4 +1,5 @@
 import React, {useState} from 'react'
+import classNames from "classnames"
 import styles from "./MobileNav.module.scss"
 
 const MobileNav = () => {
@@ -6,15 +7,17 @@ const MobileNav = () => {
    
 
     const openNav = () => {
+        console.log("CLICK CLICK")
         setIsOpen(!isOpen);
       }
+      console.log("e", isOpen)
 
     return (
-        <div className={styles.navMob}  className={styles.open}>
-            <span className={styles.openbtn} onClick={openNav}>&#9776;</span>
+        <div className={styles.mobileNav}>
+            <button className={styles.openbtn} onClick={openNav}>&#9776;</button>
             
-            {isOpen && <nav className={styles.sideNav} className={styles.open}>
-                            <span className={styles.closebtn} onClick={openNav}>X</span>
+            {isOpen && <nav className={styles.sidepanel}>
+                            <button className={styles.closebtn} onClick={openNav}>X</button>
                             <ul>
                                 <li>
                                     <a href="#home">home</a>
