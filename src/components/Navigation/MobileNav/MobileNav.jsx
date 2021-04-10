@@ -1,5 +1,4 @@
 import React, {useState} from 'react'
-import classNames from "classnames"
 import styles from "./MobileNav.module.scss"
 
 const MobileNav = () => {
@@ -19,13 +18,13 @@ const MobileNav = () => {
                             <button className={styles.closebtn} onClick={openNav}>X</button>
                             <ul>
                                 <li>
-                                    <a href="#home">home</a>
+                                    <a href="#home" onClick={() => setIsOpen(false)}>home</a>
                                 </li>
                                 <li>
-                                    <a href="#projects__title">projects</a>
+                                    <a href="#projects__title" onClick={() => setIsOpen(false)}>projects</a>
                                 </li>
                                 <li>
-                                    <a href="#about">about</a>
+                                    <a href="#about" onClick={() => setIsOpen(false)}>about</a>
                                 </li>
                             </ul>
                         </nav>}
