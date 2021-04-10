@@ -7,7 +7,6 @@ const MobileNav = () => {
    
 
     const openNav = () => {
-        console.log("CLICK CLICK")
         setIsOpen(!isOpen);
       }
       console.log("e", isOpen)

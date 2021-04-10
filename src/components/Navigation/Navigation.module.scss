@@ -26,13 +26,23 @@ nav {
     
             a {
                 font-size: $font-S;
-                color: $colour-white;
                 text-decoration: none;
+                cursor: pointer;
+            }
+
+            .light {
+                color: $colour-white;
             }
     
-            a:hover {
-                cursor: pointer;
+            .light:hover {
                 color: $colour-ocre;
+            }
+            .dark {
+                color: $colour-ocre;
+            }
+    
+            .dark:hover {
+                color: $colour-grey;
             }
         }
     }

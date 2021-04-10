@@ -3,7 +3,7 @@ import styles from "./AboutTitle.module.scss"
 
 const AboutTitle = () => {
     return (
-        <div className={styles.title}>
+        <div id="about" className={styles.title}>
            <h3 className={styles.about__title}>ABOUT</h3>
             <div className={styles.about__blob}>
                 <svg viewBox="0 0 187 155" fill="none" xmlns="http://www.w3.org/2000/svg">
