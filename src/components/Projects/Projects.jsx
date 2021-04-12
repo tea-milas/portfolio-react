@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useState,useEffect} from 'react'
 import styles from "./Projects.module.scss"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { library } from '@fortawesome/fontawesome-svg-core'
@@ -6,6 +6,21 @@ import { fab, faSass, faJsSquare,faHtml5,faReact,faCss3} from '@fortawesome/free
 library.add(fab,faSass,faJsSquare,faHtml5,faReact,faCss3);
 
 const Projects = () => {
+    const [width, setWidth] = useState(window.innerWidth);
+    
+    const handleWindowSizeChange = () => {
+        setWidth(window.innerWidth);
+    }
+
+    useEffect(() => {
+            window.addEventListener('resize', handleWindowSizeChange);
+            return () => {
+                window.removeEventListener('resize', handleWindowSizeChange);
+            }
+        }, []);
+
+    let isMobile = (width <= 760);
+
     return (
         <>
         <h3 className={styles.projects__title} id="projects__title">PROJECTS</h3>
@@ -29,6 +44,7 @@ const Projects = () => {
 
 
             <article className={styles.project}>
+                {isMobile && <img className={styles.project__image} src="https://raw.githubusercontent.com/tea-milas/morse-code-translator/main/assets/screenshot/Screenshot.png" alt="morse code to english translator screenshot"/>}
                 <section className={styles.project__description}>
                     <h4>MORSE CODE / ENGLISH TRANSLATOR</h4>
                     <p>A translator of morse code to english and vice versa. It includes text to speech for english and audio reproduction for morse code. It's made with vanilla JavaScript and tested with Jest. It was made by writing the tests first.</p>
@@ -42,7 +58,7 @@ const Projects = () => {
                         <button><a href="https://tea-milas.github.io/morse-code-translator/" target="_blank" rel="noreferrer">WEBSITE</a></button>
                     </div>
                 </section>   
-                <img className={styles.project__image} src="https://raw.githubusercontent.com/tea-milas/morse-code-translator/main/assets/screenshot/Screenshot.png" alt="morse code to english translator screenshot"/>
+               {!isMobile && <img className={styles.project__image} src="https://raw.githubusercontent.com/tea-milas/morse-code-translator/main/assets/screenshot/Screenshot.png" alt="morse code to english translator screenshot"/>} 
             </article>
 
             
@@ -64,6 +80,7 @@ const Projects = () => {
             </article>   
 
             <article className={styles.project}>
+                {isMobile && <img className={styles.project__image} src="https://raw.githubusercontent.com/tea-milas/memory-game/main/assets/img/screenshot_2.JPG" alt="memory game preview"/>}
                 <section className={styles.project__description}>
                     <h4>MEMORY GAME</h4>
                     <p>A game of memory where you need to match leaves before time runs out. Made with vanilla JavaScript</p>
@@ -77,7 +94,7 @@ const Projects = () => {
                         <button><a href="https://tea-milas.github.io/memory-game/" target="_blank" rel="noreferrer">WEBSITE</a></button>
                     </div>
                 </section>   
-                <img className={styles.project__image} src="https://raw.githubusercontent.com/tea-milas/memory-game/main/assets/img/screenshot_2.JPG" alt="memory game preview"/>
+                {!isMobile && <img className={styles.project__image} src="https://raw.githubusercontent.com/tea-milas/memory-game/main/assets/img/screenshot_2.JPG" alt="memory game preview"/>}
             </article>
 
             <article className={styles.project}>
@@ -98,7 +115,7 @@ const Projects = () => {
             </article>
 
             <article className={styles.project}>
-                
+                {isMobile && <img className={styles.project__image} src="https://raw.githubusercontent.com/tea-milas/punk-API/main/punk_api_screenshot.png" alt="PUNK API preview"/>}
                 <section className={styles.project__description}>
                     <h4>PUNK API</h4>
                     <p>A React App that uses the Punk API to fetch data and display it on the application. The user can search and filter the beer selection by a range of properties. </p>
@@ -112,7 +129,7 @@ const Projects = () => {
                         <button><a href="https://tea-milas.github.io/pottery-collective/" target="_blank" rel="noreferrer">WEBSITE</a></button>
                     </div>
                 </section>   
-                <img className={styles.project__image} src="https://raw.githubusercontent.com/tea-milas/punk-API/main/punk_api_screenshot.png" alt="PUNK API preview"/>
+                {!isMobile && <img className={styles.project__image} src="https://raw.githubusercontent.com/tea-milas/punk-API/main/punk_api_screenshot.png" alt="PUNK API preview"/>}
             </article>                     
 
             <span className={styles.vertical_line2}></span>
