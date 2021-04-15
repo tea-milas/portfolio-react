@@ -126,7 +126,7 @@ const Projects = () => {
                     </ul>
                     <div className={styles.project__links}>
                         <button><a href="https://github.com/tea-milas/punk-API" target="_blank" rel="noreferrer">CODE</a></button>
-                        <button><a href="https://tea-milas.github.io/pottery-collective/" target="_blank" rel="noreferrer">WEBSITE</a></button>
+                        <button><a href="https://punk-api-tea.herokuapp.com/" target="_blank" rel="noreferrer">WEBSITE</a></button>
                     </div>
                 </section>   
                 {!isMobile && <img className={styles.project__image} src="https://raw.githubusercontent.com/tea-milas/punk-API/main/punk_api_screenshot.png" alt="PUNK API preview"/>}
