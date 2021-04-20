@@ -101,7 +101,7 @@ const Projects = () => {
             </article>   
 
             <article className={styles.project}>
-                {isMobile && <img className={styles.project__image} src="https://raw.githubusercontent.com/tea-milas/memory-game/main/assets/img/screenshot_2.JPG" alt="memory game preview"/>}
+                <img className={styles.project__image} src="https://raw.githubusercontent.com/tea-milas/memory-game/main/assets/img/screenshot_2.JPG" alt="memory game preview"/>
                 <section className={styles.project__description}>
                     <h4>Memory game</h4>
                     <p>A game of memory where you need to match leaves before time runs out. Made with vanilla JavaScript</p>
@@ -115,11 +115,10 @@ const Projects = () => {
                         <button><a href="https://tea-milas.github.io/memory-game/" target="_blank" rel="noreferrer">WEBSITE</a></button>
                     </div>
                 </section>   
-                {!isMobile && <img className={styles.project__image} src="https://raw.githubusercontent.com/tea-milas/memory-game/main/assets/img/screenshot_2.JPG" alt="memory game preview"/>}
             </article>
 
             <article className={styles.project}>
-                <img className={styles.project__image} src="https://raw.githubusercontent.com/tea-milas/pottery-collective/main/assets/img/Screenshot_homepage.png" alt="pottery collective homepage"/>
+               {isMobile && <img className={styles.project__image} src="https://raw.githubusercontent.com/tea-milas/pottery-collective/main/assets/img/Screenshot_homepage.png" alt="pottery collective homepage"/>}
                 <section className={styles.project__description}>
                     <h4>Pottery collective</h4>
                     <p>A static website made using HTML5, CSS3 and a bit of vanilla JavaScript.</p>
@@ -132,11 +131,12 @@ const Projects = () => {
                         <button><a href="https://github.com/tea-milas/pottery-collective" target="_blank" rel="noreferrer">CODE</a></button>
                         <button><a href="https://tea-milas.github.io/pottery-collective/" target="_blank" rel="noreferrer">WEBSITE</a></button>
                     </div>
-                </section>   
+                </section>  
+                {!isMobile && <img className={styles.project__image} src="https://raw.githubusercontent.com/tea-milas/pottery-collective/main/assets/img/Screenshot_homepage.png" alt="pottery collective homepage"/>} 
             </article>
 
             <article className={styles.project}>
-                {isMobile && <img className={styles.project__image} src="https://raw.githubusercontent.com/tea-milas/punk-API/main/punk_api_screenshot.png" alt="PUNK API preview"/>}
+                <img className={styles.project__image} src="https://raw.githubusercontent.com/tea-milas/punk-API/main/punk_api_screenshot.png" alt="PUNK API preview"/>
                 <section className={styles.project__description}>
                     <h4>Punk API</h4>
                     <p>A React App that uses the Punk API to fetch data and display it on the application. The user can search and filter the beer selection by a range of properties. </p>
@@ -150,7 +150,6 @@ const Projects = () => {
                         <button><a href="https://punk-api-tea.herokuapp.com/" target="_blank" rel="noreferrer">WEBSITE</a></button>
                     </div>
                 </section>   
-                {!isMobile && <img className={styles.project__image} src="https://raw.githubusercontent.com/tea-milas/punk-API/main/punk_api_screenshot.png" alt="PUNK API preview"/>}
             </article>                     
 
             <span className={styles.vertical_line2}></span>
