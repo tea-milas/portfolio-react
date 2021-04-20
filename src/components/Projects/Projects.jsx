@@ -26,7 +26,7 @@ const Projects = () => {
         <h3 className={styles.projects__title} id="projects__title">PROJECTS</h3>
         <div className={styles.projects}>
             <article className={styles.project}>
-                <img className={styles.project__image} src="https://raw.githubusercontent.com/tea-milas/notesy-app/main/src/assets/img/Screenshot_login.png"/>
+                <img className={styles.project__image} src="https://raw.githubusercontent.com/tea-milas/notesy-app/main/src/assets/img/Screenshot_login.png" alt="notesy img"/>
                 <section className={styles.project__description}>
                     <h4>NOTESY</h4>
                     <p>Notesy is a note taking app. It was built using React, ES6, SASS and Firebase. It allows users to register, login with email and password or login with a google account, add/delete notes and sign out at the end of their session.</p>
@@ -63,7 +63,7 @@ const Projects = () => {
 
             
             <article className={styles.project}>
-                <img className={styles.project__image} src="https://raw.githubusercontent.com/tea-milas/calculator/main/assets/svg/calculator_img.jpg"/>
+                <img className={styles.project__image} src="https://raw.githubusercontent.com/tea-milas/calculator/main/assets/svg/calculator_img.jpg" alt="calculator img"/>
                 <section className={styles.project__description}>
                     <h4>CALCULATOR</h4>
                     <p>A calculator that can do simple operations between two numbers and non complex multiple operations. It was made with vanilla JavaScript and was tested with Cypres</p>
