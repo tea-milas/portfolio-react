@@ -23,7 +23,7 @@ const AboutDescription = () => {
                         <a href="mailto: teamilas@hotmail.com"><FontAwesomeIcon icon={['fas', 'envelope']}/></a>
                     </li>
                     <li>
-                        <a href="https://drive.google.com/file/d/1LU_n81hRnspXXBN28RAHoWnWjHI6ZUPt/view?usp=sharing"><FontAwesomeIcon icon={['fas', 'file-pdf']} className={styles.pdf_icon}/></a>
+                        <a href="https://drive.google.com/file/d/1LU_n81hRnspXXBN28RAHoWnWjHI6ZUPt/view?usp=sharing"  target="_blank" rel="noreferrer"><FontAwesomeIcon icon={['fas', 'file-pdf']} className={styles.pdf_icon}/></a>
                     </li>
                 </ul>
             </section>  
