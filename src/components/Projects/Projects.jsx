@@ -35,7 +35,7 @@ const Projects = () => {
                     <ul>
                         <li><FontAwesomeIcon icon={['fab', 'sass']}/></li>
                         <li><FontAwesomeIcon icon={['fab', 'react']}/></li>
-                        <li><FontAwesomeIcon icon={['fab', 'html5']}/></li>
+                        <li><FontAwesomeIcon icon={['fas', 'database']}/></li>
                     </ul>
                     <div className={styles.project__links}>
                         <button><a href="https://github.com/tea-milas/notesy-app" target="_blank" rel="noreferrer">CODE</a></button>
