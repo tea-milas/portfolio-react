@@ -1,5 +1,6 @@
 import React from 'react';
 import styles from "./AboutDescription.module.scss";
+import profile_img from '../../../assets/img/profileimg.jpg'
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {fas, faEnvelope} from '@fortawesome/free-solid-svg-icons'
@@ -27,7 +28,7 @@ const AboutDescription = () => {
                     </li>
                 </ul>
             </section>  
-            <img className={styles.contact__img} src="../profileimg.jpg" alt="Tea"/>
+            <img className={styles.contact__img} src={profile_img} alt="Tea profile img"/>
               
         </article>
     )
