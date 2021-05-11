@@ -44,11 +44,11 @@
       "last 1 safari version"
     ]
   },
-  "description": "This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).",
+  "description": "Hi, I'm Tea and I'm a London based software developer!",
   "main": "index.js",
   "devDependencies": {
     "gh-pages": "^3.1.0"
   },
-  "author": "",
+  "author": "Tea Milas",
   "license": "ISC"
 }
