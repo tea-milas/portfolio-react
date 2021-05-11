@@ -1,6 +1,7 @@
 # Portfolio
 A presentation of some of my work. It's fully responsive.
 Visit the website: <a href="http://www.teamilas.com/"> HERE </a>
+in case the custom domain isn't working use this one: https://tea-milas.github.io/portfolio-react/
 
 ## Technologies
 * React  
