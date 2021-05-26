@@ -39,7 +39,7 @@ const Projects = () => {
                     </ul>
                     <div className={styles.project__links}>
                         <button><a href="https://github.com/tea-milas/notesy-app" target="_blank" rel="noreferrer">CODE</a></button>
-                        <button><a href="https://notesy-app-tea.herokuapp.com/" target="_blank" rel="noreferrer">WEBSITE</a></button>
+                        <button><a href="https://notesy.teamilas.com/" target="_blank" rel="noreferrer">WEBSITE</a></button>
                     </div>
                 </section>   
             </article>
@@ -147,7 +147,7 @@ const Projects = () => {
                     </ul>
                     <div className={styles.project__links}>
                         <button><a href="https://github.com/tea-milas/punk-API" target="_blank" rel="noreferrer">CODE</a></button>
-                        <button><a href="https://punk-api-tea.herokuapp.com/" target="_blank" rel="noreferrer">WEBSITE</a></button>
+                        <button><a href="https://punkapi.teamilas.com/" target="_blank" rel="noreferrer">WEBSITE</a></button>
                     </div>
                 </section>   
             </article>                     
