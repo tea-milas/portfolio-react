@@ -1,6 +1,7 @@
 import React, {useState,useEffect} from 'react'
 import styles from "./Projects.module.scss"
-import knowaste_img from "../../assets/img/knowaste_screenshot.png";
+import knowaste_img from "../../assets/img/knowaste_screenshot.png"
+import photography_screenshot from '../../assets/img/portfolio-screenshot.jpg'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { fab, faSass, faJsSquare,faHtml5,faReact,faCss3} from '@fortawesome/free-brands-svg-icons'
@@ -150,7 +151,25 @@ const Projects = () => {
                         <button><a href="https://punkapi.teamilas.com/" target="_blank" rel="noreferrer">WEBSITE</a></button>
                     </div>
                 </section>   
-            </article>                     
+            </article>
+
+            <article className={styles.project}>
+                {isMobile && <img className={styles.project__image} src={photography_screenshot} alt="Photography portfolio preview"/>}
+                <section className={styles.project__description}>
+                    <h4>Photography Portfolio</h4>
+                    <p>A photography website that shows a selection of photos, grouped in categories, and has a contact form to contact the owner. It was made using React, ES6 ans SCSS. It's fully responsive.</p>
+                    <ul>
+                        <li><FontAwesomeIcon icon={['fab', 'sass']}/></li>
+                        <li><FontAwesomeIcon icon={['fab', 'js-square']}/></li>
+                        <li><FontAwesomeIcon icon={['fab', 'react']}/></li>
+                    </ul>
+                    <div className={styles.project__links}>
+                        <button><a href="https://github.com/tea-milas/photography-portfolio" target="_blank" rel="noreferrer">CODE</a></button>
+                        <button><a href="https://photography.teamilas.com/" target="_blank" rel="noreferrer">WEBSITE</a></button>
+                    </div>
+                </section> 
+                {!isMobile && <img className={styles.project__image} src={photography_screenshot} alt="Photography portfolio preview"/>}  
+            </article>                                          
 
             <span className={styles.vertical_line2}></span>
         </div> 
