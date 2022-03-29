@@ -137,7 +137,7 @@ const Projects = () => {
             </article>
 
             <article className={styles.project}>
-                <img className={styles.project__image} src="https://raw.githubusercontent.com/tea-milas/punk-API/main/punk_api_screenshot.png" alt="PUNK API preview"/>
+                <img className={styles.project__image} src="https://raw.githubusercontent.com/tea-milas/punk-API/main/src/assets/punk_api_screenshot.png" alt="PUNK API preview"/>
                 <section className={styles.project__description}>
                     <h4>Punk API</h4>
                     <p>A React App that uses the Punk API to fetch data and display it on the application. The user can search and filter the beer selection by a range of properties. </p>
