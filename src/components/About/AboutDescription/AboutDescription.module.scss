@@ -1,222 +1,222 @@
-@import '../../../assets/styles/_variables.scss';
-@import '../../../assets/styles/_typography.scss';
+@import "../../../assets/styles/_variables.scss";
+@import "../../../assets/styles/_typography.scss";
 
 .about__description {
-    margin-top: 5em;
-    width: 95%;
+  margin-top: 5em;
+  width: 95%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  .text_and_link {
+    width: 73%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    
+
+    .about__text {
+      margin: 0.5em;
+      width: 100%;
+      text-align: left;
+      font-weight: 400;
+      line-height: 36px;
+      font-size: 30px;
+      color: $colour-white;
+
+      span {
+        color: $colour-ocre;
+      }
+    }
+
+    .contact__links {
+      margin: 1em;
+      width: 80%;
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+
+      li {
+        list-style-type: none;
+        color: $colour-white;
+
+        a {
+          color: $colour-ocre;
+          font-size: 30px;
+
+          &:hover,
+          &:active {
+            color: $colour-light-grey;
+          }
+        }
+      }
+    }
+  }
+
+  .contact__img {
+    border: 0;
+    border-radius: 5px;
+    height: 250px;
+    width: auto;
+    background-color: gray;
+    margin: 0.5em;
+  }
+}
+
+@media only screen and (min-width: 667px) {
+  .about__description {
+    width: 95%;
+    flex-direction: row;
+
     .text_and_link {
-        width: 73%;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
+      margin: 1em;
+      width: 50%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
 
-        .about__text {
-            margin: 0.5em;
-            width: 100%;
-            text-align: left;
-            font-weight: 400;
-            line-height: 36px;
-            font-size: 30px;
-            color: $colour-white;
+      .about__text {
+        margin: 0.5em;
+        width: 100%;
+        text-align: left;
+        font-weight: 400;
+        line-height: 36px;
+        font-size: 30px;
+      }
 
-            span {
-                color: $colour-ocre;
-            } 
-        }
-
-        .contact__links{
-            margin: 1em;
-            width: 80%;
-            display: flex;
-            justify-content: space-evenly;
-            align-items: center;
-
-            li{
-                list-style-type: none;
-                color: $colour-white;
-
-                a {
-                    color: $colour-ocre;
-                    font-size: 30px;
-
-                    &:hover, &:active {
-                        color: $colour-light-grey;
-                    }
-                }
-            }
-        }
+      .contact__links {
+        margin: 1em 6em 0 0;
+      }
     }
 
     .contact__img {
-        border: 0;
-        border-radius: 5px;
-        height: 250px;
-        width: auto;
-        background-color: gray;
-        margin: 0.5em;
-        
+      height: 250px;
+      margin-bottom: 2em;
     }
-}
-
-
-@media only screen and (min-width: 667px) {
-    .about__description {
-        width: 95%;
-        flex-direction: row;
-        
-        .text_and_link {
-            margin: 1em;
-            width: 50%;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            
-            .about__text {
-                margin: 0.5em;
-                width: 100%;
-                text-align: left;
-                font-weight: 400;
-                line-height: 36px;
-                font-size: 30px;
-            }
-        
-            .contact__links{
-                margin: 1em 6em 0 0;
-            }
-        }
-    
-        .contact__img {
-            height: 250px;
-            margin-bottom: 2em;
-        }
-    }
+  }
 }
 
 @media only screen and (min-width: 768px) {
-    .about__description {
-        width: 95%;
-        flex-direction: column;
+  .about__description {
+    width: 95%;
+    flex-direction: column;
 
-        .text_and_link {
-            width: 73%;
-            flex-direction: column;
-    
-            .about__text {
-                line-height: 76px;
-                font-size: 60px;
-            }
-    
-            .contact__links{
-                margin: 0;
-                li{
-                    a {
-                       font-size: 50px;
-                    }
-                }
-            }
+    .text_and_link {
+      width: 73%;
+      flex-direction: column;
+
+      .about__text {
+        line-height: 76px;
+        font-size: 60px;
+      }
+
+      .contact__links {
+        margin: 0;
+        li {
+          a {
+            font-size: 50px;
+          }
         }
-    
-        .contact__img {
-            margin-top: 2em;
-            height: 350px;
-        }
+      }
     }
+
+    .contact__img {
+      margin-top: 2em;
+      height: 350px;
+    }
+  }
 }
 
 @media only screen and (min-width: 812px) {
-    .about__description {
-        flex-direction: row;
-        justify-content: space-around;
-        
-        .text_and_link {
-            width: 50%;
-            flex-direction: column;
-            
-            .about__text {
-                line-height: 36px;
-                font-size: 30px;
-            }
-        
-            .contact__links{
-                margin: 1em 6em 0 0;
-                li{
-                    a {
-                       font-size: 40px;
-                    }
-                }
-            }
+  .about__description {
+    flex-direction: row;
+    justify-content: space-around;
+
+    .text_and_link {
+      width: 50%;
+      flex-direction: column;
+
+      .about__text {
+        line-height: 36px;
+        font-size: 30px;
+      }
+
+      .contact__links {
+        margin: 1em 6em 0 0;
+        li {
+          a {
+            font-size: 40px;
+          }
         }
-    
-        .contact__img {
-            height: 220px;
-            margin-bottom: 1em;
-        }
+      }
     }
+
+    .contact__img {
+      height: 220px;
+      margin-bottom: 1em;
+    }
+  }
 }
 
 @media only screen and (min-width: 1024px) {
-    .about__description {
-        justify-content: space-evenly;
-        
-        .text_and_link {
-            width: 50%;
-            flex-direction: column;
-            
-            .about__text {
-                line-height: 73px;
-                font-size: 60px;
-            }
-        
-            .contact__links{
-                margin: 1em 3em 0 0;
-                li{
-                    a {
-                       font-size: 50px;
-                    }
-                }
-            }
+  .about__description {
+    justify-content: space-evenly;
+    margin-top: 140px;
+
+    .text_and_link {
+      width: 50%;
+      flex-direction: column;
+
+      .about__text {
+        line-height: 73px;
+        font-size: 60px;
+      }
+
+      .contact__links {
+        margin: 1em auto;
+        margin-left: 0;
+        justify-content: flex-start;
+        li {
+          margin-right: 60px;
+          a {
+            font-size: 50px;
+          }
         }
-    
-        .contact__img {
-            height: 400px;
-            margin-bottom: 1em;
-        }
+      }
     }
+
+    .contact__img {
+      height: 400px;
+      margin-bottom: 1em;
+    }
+  }
 }
 
 @media only screen and (min-width: 1440px) {
-    .about__description {
-        margin-top: 7em;
-        
-        .text_and_link {
-            margin-top: 6em;
-            width: 50%;
-            flex-direction: column;
-            
-            .about__text {
-                line-height: 87px;
-                font-size: 75px;
-            }
-            .contact__links{
-                margin-right: 13em;
+  .about__description {
+    margin-top: 7em;
 
-                .pdf_icon {
-                    font-size: 45px;
-                    margin-bottom: 5px;
-                }
-            }
-        
+    .text_and_link {
+      margin-top: 6em;
+      width: 50%;
+      flex-direction: column;
+
+      .about__text {
+        line-height: 87px;
+        font-size: 75px;
+      }
+      .contact__links {
+        .pdf_icon {
+          font-size: 45px;
+          margin-bottom: 5px;
         }
-    
-        .contact__img {
-            height: 500px;
-        }
+      }
     }
+
+    .contact__img {
+      height: 500px;
+    }
+  }
 }

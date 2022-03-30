@@ -1,180 +1,88 @@
-import React, {useState,useEffect} from 'react'
-import styles from "./Projects.module.scss"
-import knowaste_img from "../../assets/img/knowaste_screenshot.png"
-import photography_screenshot from '../../assets/img/portfolio-screenshot.jpg'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { library } from '@fortawesome/fontawesome-svg-core'
-import { fab, faSass, faJsSquare,faHtml5,faReact,faCss3} from '@fortawesome/free-brands-svg-icons'
-library.add(fab,faSass,faJsSquare,faHtml5,faReact,faCss3);
-
+import React from "react";
+import styles from "./Projects.module.scss";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { library } from "@fortawesome/fontawesome-svg-core";
+import {
+  fab,
+  faSass,
+  faJsSquare,
+  faHtml5,
+  faReact,
+  faCss3,
+} from "@fortawesome/free-brands-svg-icons";
+import useIsMobile from "../../hooks/useIsMobile";
+import projectsInfo from "../../assets/data/projectsInfo";
+library.add(fab, faSass, faJsSquare, faHtml5, faReact, faCss3);
 
 const Projects = () => {
-    const [width, setWidth] = useState(window.innerWidth);
-    
-    const handleWindowSizeChange = () => {
-        setWidth(window.innerWidth);
-    }
+  const { isMobile } = useIsMobile();
 
-    useEffect(() => {
-            window.addEventListener('resize', handleWindowSizeChange);
-            return () => {
-                window.removeEventListener('resize', handleWindowSizeChange);
-            }
-        }, []);
+  return (
+    <>
+      <h3 className={styles.projects__title} id="projects__title">
+        PROJECTS
+      </h3>
+      <div className={styles.projects}>
+        {projectsInfo.map((project, i) => (
+          <article className={styles.project} key={project.title}>
+            {i % 2 ? (
+              isMobile && (
+                <img
+                  className={styles.project__image}
+                  src={project.img.src}
+                  alt={project.img.alt}
+                />
+              )
+            ) : (
+              <img
+                className={styles.project__image}
+                src={project.img.src}
+                alt={project.img.alt}
+              />
+            )}
+            <section className={styles.project__description}>
+              <h4>{project.title}</h4>
+              <p>{project.description}</p>
+              <ul>
+                {project.icons.map((icon, i) => (
+                  <li key={project.title + "-icon-" + i}>
+                    <FontAwesomeIcon icon={icon} />
+                  </li>
+                ))}
+              </ul>
+              <div className={styles.project__links}>
+                <button>
+                  <a href={project.links.code} target="_blank" rel="noreferrer">
+                    CODE
+                  </a>
+                </button>
+                <button>
+                  <a
+                    href={project.links.website}
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    WEBSITE
+                  </a>
+                </button>
+              </div>
+            </section>
+            {i % 2
+              ? !isMobile && (
+                  <img
+                    className={styles.project__image}
+                    src={project.img.src}
+                    alt={project.img.alt}
+                  />
+                )
+              : null}
+          </article>
+        ))}
 
-    let isMobile = (width <= 760);
+        <span className={styles.vertical_line2}></span>
+      </div>
+    </>
+  );
+};
 
-    return (
-        <>
-        <h3 className={styles.projects__title} id="projects__title">PROJECTS</h3>
-        <div className={styles.projects}>
-            <article className={styles.project}>
-                <img className={styles.project__image} src="https://raw.githubusercontent.com/tea-milas/notesy-app/main/src/assets/img/Screenshot_login.png" alt="notesy img"/>
-                <section className={styles.project__description}>
-                    <h4>Notesy</h4>
-                    <p>Notesy is a note taking app. It was built using React, ES6, SASS and Firebase. It allows users to register, login with email and password or login with a google account, add/delete notes and sign out at the end of their session.</p>
-                    <ul>
-                        <li><FontAwesomeIcon icon={['fab', 'sass']}/></li>
-                        <li><FontAwesomeIcon icon={['fab', 'react']}/></li>
-                        <li><FontAwesomeIcon icon={['fas', 'database']}/></li>
-                    </ul>
-                    <div className={styles.project__links}>
-                        <button><a href="https://github.com/tea-milas/notesy-app" target="_blank" rel="noreferrer">CODE</a></button>
-                        <button><a href="https://notesy.teamilas.com/" target="_blank" rel="noreferrer">WEBSITE</a></button>
-                    </div>
-                </section>   
-            </article>
-
-
-            <article className={styles.project}>
-                {isMobile && <img className={styles.project__image} src="https://raw.githubusercontent.com/tea-milas/morse-code-translator/main/assets/screenshot/Screenshot.png" alt="morse code to english translator screenshot"/>}
-                <section className={styles.project__description}>
-                    <h4>Morse code / English translator</h4>
-                    <p>A translator of morse code to english and vice versa. It includes text to speech for english and audio reproduction for morse code. It's made with vanilla JavaScript and tested with Jest. It was made by writing the tests first.</p>
-                    <ul>
-                        <li><FontAwesomeIcon icon={['fab', 'sass']}/></li>
-                        <li><FontAwesomeIcon icon={['fab', 'js-square']}/></li>
-                        <li><FontAwesomeIcon icon={['fab', 'html5']}/></li>
-                    </ul>
-                    <div className={styles.project__links}>
-                        <button><a href="https://github.com/tea-milas/morse-code-translator" target="_blank" rel="noreferrer">CODE</a></button>
-                        <button><a href="https://tea-milas.github.io/morse-code-translator/" target="_blank" rel="noreferrer">WEBSITE</a></button>
-                    </div>
-                </section>   
-               {!isMobile && <img className={styles.project__image} src="https://raw.githubusercontent.com/tea-milas/morse-code-translator/main/assets/screenshot/Screenshot.png" alt="morse code to english translator screenshot"/>} 
-            </article>
-
-            <article className={styles.project}>
-                <img className={styles.project__image} src={knowaste_img} alt="knowaste img"/>
-                <section className={styles.project__description}>
-                    <h4>KnoWaste</h4>
-                    <p>A 4 week client project - waste reduction service for students and catering canteens. I was involved in different roles, from being a designer, working on the front-end, 
-                        to being a product owner and integrating part of the front-end with Firebase.
-                    </p>
-                    <ul>
-                        <li><FontAwesomeIcon icon={['fab', 'sass']}/></li>
-                        <li><FontAwesomeIcon icon={['fab', 'react']}/></li>
-                        <li><FontAwesomeIcon icon={['fas', 'database']}/></li>
-                    </ul>
-                    <div className={styles.project__links}>
-                        <button><a href="https://github.com/nology-tech/knowaste" target="_blank" rel="noreferrer">CODE</a></button>
-                        <button><a href="https://knowaste-3c92c.web.app/" target="_blank" rel="noreferrer">WEBSITE</a></button>
-                    </div>
-                </section>   
-            </article>   
-
-            <article className={styles.project}>
-                {isMobile && <img className={styles.project__image} src="https://raw.githubusercontent.com/tea-milas/calculator/main/assets/svg/calculator_img.jpg" alt="calculator img"/>}
-                <section className={styles.project__description}>
-                    <h4>Calculator</h4>
-                    <p>A calculator that can do simple operations between two numbers and non complex multiple operations. It was made with vanilla JavaScript and was tested with Cypres</p>
-                    <ul>
-                        <li><FontAwesomeIcon icon={['fab', 'sass']}/></li>
-                        <li><FontAwesomeIcon icon={['fab', 'js-square']}/></li>
-                        <li><FontAwesomeIcon icon={['fab', 'html5']}/></li>
-                    </ul>
-                    <div className={styles.project__links}>
-                        <button><a href="https://github.com/tea-milas/calculator" target="_blank" rel="noreferrer">CODE</a></button>
-                        <button><a href="https://tea-milas.github.io/calculator/" target="_blank" rel="noreferrer">WEBSITE</a></button>
-                    </div>
-                </section> 
-               {!isMobile && <img className={styles.project__image} src="https://raw.githubusercontent.com/tea-milas/calculator/main/assets/svg/calculator_img.jpg" alt="calculator img"/>  }
-            </article>   
-
-            <article className={styles.project}>
-                <img className={styles.project__image} src="https://raw.githubusercontent.com/tea-milas/memory-game/main/assets/img/screenshot_2.JPG" alt="memory game preview"/>
-                <section className={styles.project__description}>
-                    <h4>Memory game</h4>
-                    <p>A game of memory where you need to match leaves before time runs out. Made with vanilla JavaScript</p>
-                    <ul>
-                        <li><FontAwesomeIcon icon={['fab', 'sass']}/></li>
-                        <li><FontAwesomeIcon icon={['fab', 'js-square']}/></li>
-                        <li><FontAwesomeIcon icon={['fab', 'html5']}/></li>
-                    </ul>
-                    <div className={styles.project__links}>
-                        <button><a href="https://github.com/tea-milas/memory-game" target="_blank" rel="noreferrer">CODE</a></button>
-                        <button><a href="https://tea-milas.github.io/memory-game/" target="_blank" rel="noreferrer">WEBSITE</a></button>
-                    </div>
-                </section>   
-            </article>
-
-            <article className={styles.project}>
-               {isMobile && <img className={styles.project__image} src="https://raw.githubusercontent.com/tea-milas/pottery-collective/main/assets/img/Screenshot_homepage.png" alt="pottery collective homepage"/>}
-                <section className={styles.project__description}>
-                    <h4>Pottery collective</h4>
-                    <p>A static website made using HTML5, CSS3 and a bit of vanilla JavaScript.</p>
-                    <ul>
-                        <li><FontAwesomeIcon icon={['fab', 'css3']}/></li>
-                        <li><FontAwesomeIcon icon={['fab', 'js-square']}/></li>
-                        <li><FontAwesomeIcon icon={['fab', 'html5']}/></li>
-                    </ul>
-                    <div className={styles.project__links}>
-                        <button><a href="https://github.com/tea-milas/pottery-collective" target="_blank" rel="noreferrer">CODE</a></button>
-                        <button><a href="https://tea-milas.github.io/pottery-collective/" target="_blank" rel="noreferrer">WEBSITE</a></button>
-                    </div>
-                </section>  
-                {!isMobile && <img className={styles.project__image} src="https://raw.githubusercontent.com/tea-milas/pottery-collective/main/assets/img/Screenshot_homepage.png" alt="pottery collective homepage"/>} 
-            </article>
-
-            <article className={styles.project}>
-                <img className={styles.project__image} src="https://raw.githubusercontent.com/tea-milas/punk-API/main/src/assets/punk_api_screenshot.png" alt="PUNK API preview"/>
-                <section className={styles.project__description}>
-                    <h4>Punk API</h4>
-                    <p>A React App that uses the Punk API to fetch data and display it on the application. The user can search and filter the beer selection by a range of properties. </p>
-                    <ul>
-                        <li><FontAwesomeIcon icon={['fab', 'sass']}/></li>
-                        <li><FontAwesomeIcon icon={['fab', 'js-square']}/></li>
-                        <li><FontAwesomeIcon icon={['fab', 'react']}/></li>
-                    </ul>
-                    <div className={styles.project__links}>
-                        <button><a href="https://github.com/tea-milas/punk-API" target="_blank" rel="noreferrer">CODE</a></button>
-                        <button><a href="https://punkapi.teamilas.com/" target="_blank" rel="noreferrer">WEBSITE</a></button>
-                    </div>
-                </section>   
-            </article>
-
-            <article className={styles.project}>
-                {isMobile && <img className={styles.project__image} src={photography_screenshot} alt="Photography portfolio preview"/>}
-                <section className={styles.project__description}>
-                    <h4>Photography Portfolio</h4>
-                    <p>A photography website that shows a selection of photos, grouped in categories, and has a contact form to contact the owner. It was made using React, ES6 ans SCSS. It's fully responsive.</p>
-                    <ul>
-                        <li><FontAwesomeIcon icon={['fab', 'sass']}/></li>
-                        <li><FontAwesomeIcon icon={['fab', 'js-square']}/></li>
-                        <li><FontAwesomeIcon icon={['fab', 'react']}/></li>
-                    </ul>
-                    <div className={styles.project__links}>
-                        <button><a href="https://github.com/tea-milas/photography-portfolio" target="_blank" rel="noreferrer">CODE</a></button>
-                        <button><a href="https://photography.teamilas.com/" target="_blank" rel="noreferrer">WEBSITE</a></button>
-                    </div>
-                </section> 
-                {!isMobile && <img className={styles.project__image} src={photography_screenshot} alt="Photography portfolio preview"/>}  
-            </article>                                          
-
-            <span className={styles.vertical_line2}></span>
-        </div> 
-        </>
-    )
-}
-
-export default Projects
+export default Projects;

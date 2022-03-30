@@ -1,57 +1,63 @@
-@import '../../assets/styles/_variables.scss';
-@import '../../assets/styles/_typography.scss';
+@import "../../assets/styles/_variables.scss";
+@import "../../assets/styles/_typography.scss";
 
 header {
-    height: 100vh;
-    width: 100%;
-    background-color: $colour-grey;
-    position: relative;
-    display: flex;
-    justify-content: center;
+  height: 100vh;
+  width: 100%;
+  background-color: $colour-grey;
+  position: relative;
+  display: flex;
+  justify-content: center;
 
-    .vertical_line{
-        position: absolute;
-        bottom: -13%;
-        right: 8%;
-        display: inline-block;
-        border-left: 7px solid $colour-light-grey;
-        height: 180px;
-    }
+  .vertical_line {
+    position: absolute;
+    bottom: -13%;
+    right: 8%;
+    display: inline-block;
+    border-left: 7px solid $colour-light-grey;
+    height: 180px;
+  }
 }
 
 @media only screen and (min-width: 667px) {
-    header {
-        .vertical_line{
-            bottom: -20%;
-            height: 150px;
-        }
+  header {
+    .vertical_line {
+      bottom: -20%;
+      height: 150px;
     }
+  }
 }
 
 @media only screen and (min-width: 768px) {
-    header {
-        .vertical_line{
-            bottom: -10%;
-            height: 200px;
-        }
+  header {
+    .vertical_line {
+      bottom: -10%;
+      height: 200px;
     }
+  }
 }
 
 @media only screen and (min-width: 812px) {
-    header {
-        .vertical_line{
-            bottom: -20%;
-            height: 150px;
-        }
+  header {
+    .vertical_line {
+      bottom: -20%;
+      height: 150px;
     }
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  header {
+    .vertical_line {
+      height: 280px;
+    }
+  }
 }
 
 @media only screen and (min-width: 1440px) {
-    header {
-        .vertical_line{
-            bottom: -13%;
-            height: 280px;
-        }
+  header {
+    .vertical_line {
+      bottom: -13%;
     }
-    
- }
+  }
+}
